@@ -1,0 +1,23 @@
+<div class="menu">
+    
+    
+        <mat-icon aria-hidden="false" fontIcon="home" [routerLink]="['']"></mat-icon>
+        <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
+    
+
+    <button id="botaosessao">
+        <mat-icon aria-hidden="false" fontIcon="person_outline"></mat-icon>
+        Iniciar Sessão
+    </button>
+
+    <button id="botaomenu" mat-button [matMenuTriggerFor]="menu">Menu</button>
+    
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <button mat-menu-item [routerLink]="['/cadastrar-user']">Cadastrar Usuário</button>
+        <button mat-menu-item [routerLink]="['/cadastrar-game']">Cadastrar Game</button>
+        <button mat-menu-item [routerLink]="['/games-list']">Lista de Jogos</button>
+        
+    </mat-menu>
+</div>
+
+

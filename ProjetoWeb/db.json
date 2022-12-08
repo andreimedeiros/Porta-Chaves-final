@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nome": "Admin",
+      "idade": 25,
+      "email": "admin@gmail.com"
+    },
+    {
+      "id": 1,
+      "nome": "sub-admin",
+      "idade": 24,
+      "email": "subadmin@gmail.com"
+    },
+    {
+      "nome": "Ândrei",
+      "idade": "25",
+      "email": "borala@gmail.cm",
+      "id": 2
+    }
+  ],
+  "games": [
+    {
+      "id": 0,
+      "codigo": 64234,
+      "nome": "Sim City",
+      "genero": "Gerenciamento"
+    },
+    {
+      "id": 1,
+      "codigo": 12567,
+      "nome": "Age of Empires",
+      "genero": "Estratégia"
+    },
+    {
+      "id": 2,
+      "codigo": 25456,
+      "nome": "Diablo II",
+      "genero": "RPG"
+    },
+    {
+      "codigo": "24567",
+      "nome": "Crusader Kings III",
+      "genero": "Grande Estratégia",
+      "id": 3
+    }
+  ]
+}

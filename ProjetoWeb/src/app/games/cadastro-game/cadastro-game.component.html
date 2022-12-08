@@ -1,0 +1,36 @@
+<body>
+    
+    <mat-card class="cardCadastro">
+        <mat-card-header>
+            <mat-card-title>Cadastrar novo Jogo</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="formCadastro">             
+                <mat-form-field class="inputGameCadastro" appearance="fill">
+                    <mat-label>Código do Jogo</mat-label>
+                    <input matInput [(ngModel)]="game.codigo" name="gamecodigo" placeholder="Nome" type="text">
+                </mat-form-field>
+                <mat-form-field class="inputGameCadastro" appearance="fill">
+                    <mat-label>Nome do Jogo</mat-label>
+                    <input  matInput [(ngModel)]="game.nome"  name="gamenome" type="text" placeholder="Nome do jogo">
+                </mat-form-field>
+                <mat-form-field class="inputGameCadastro" appearance="fill">
+                    <mat-label>Gênero</mat-label>
+                    <input  matInput [(ngModel)]="game.genero" name="gamegenero"  placeholder="Gênero">
+                    <mat-icon matSuffix>dit</mat-icon>
+                </mat-form-field>
+                
+            </form>
+            <mat-card-actions>
+                <button id="botaocadastrar" mat-raised-button color="warn" (click)="adicionarGame()">Cadastrar Jogo Novo</button>
+            </mat-card-actions> 
+        </mat-card-content>
+        
+        
+        
+        
+        
+    </mat-card>
+</body>
+    
+    
