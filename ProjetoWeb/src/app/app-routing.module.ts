@@ -4,6 +4,7 @@ import { CadastroGameComponent } from './games/cadastro-game/cadastro-game.compo
 import { ListagemGameComponent } from './games/listagem-game/listagem-game.component';
 import { HomeComponent } from './interface/home/home.component';
 import { CadastroUserComponent } from './users/cadastro-user/cadastro-user.component';
+import { ListagemUserComponent } from './users/listagem-user/listagem-user.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:"games-list",
     component:ListagemGameComponent
+  },
+  {
+    path:"users-list",
+    component: ListagemUserComponent
   }
 ];
 

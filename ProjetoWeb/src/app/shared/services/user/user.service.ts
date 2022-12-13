@@ -26,6 +26,10 @@ export class UserService {
   inserir(user: User): Observable<User> {
     return this.httpClientUsers.post<User>(this.URL_USER, user)
   }
+
   
+  
+
+
 }
 

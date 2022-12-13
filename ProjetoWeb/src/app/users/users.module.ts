@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ListagemUserComponent } from './listagem-user/listagem-user.component';
 
 
 
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    CadastroUserComponent
+    CadastroUserComponent,
+    ListagemUserComponent
   ],
   imports: [
     FormsModule,
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   exports: [
-    CadastroUserComponent
+    CadastroUserComponent,
+    ListagemUserComponent
   ]
 })
 export class UsersModule { }
