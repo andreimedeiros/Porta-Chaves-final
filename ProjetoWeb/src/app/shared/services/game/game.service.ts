@@ -24,4 +24,17 @@ export class GameService {
     return this.httpClientGames.post<Game>(this.URL_GAME, game);
   }
 
+  remover(codigoremover: string): Observable<object> {
+    return this.httpClientGames.delete(`${this.URL_GAME}/${codigoremover}`);
+  }
+
+  pesquisarPorCodigo(codigo: string): Observable<Game> {
+    return this.httpClientGames.get<Game>(`${this.URL_GAME}/${codigo}`);
+  }
+
+  atualizar(game: Game): Observable<Game> {
+    return this.httpClientGames
+      .put<Game>(`${this.URL_GAME}/${game.codigo}`, game);
+  }
+
 }

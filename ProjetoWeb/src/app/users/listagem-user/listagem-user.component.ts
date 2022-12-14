@@ -23,4 +23,19 @@ export class ListagemUserComponent implements OnInit {
       usersobs => this.users = usersobs
     );
   }
+
+  removerUser(user: User): void {
+    const id = user.cpf || '';
+    this.userService.removerUser(id).subscribe(
+      removido => {
+        console.log(removido);
+        const indxUsuario = this.users.findIndex(u => u.cpf === user.cpf);
+
+        if (indxUsuario > -1) {
+          this.users.splice(indxUsuario, 1);
+        }
+
+      }
+    );
+  }
 }

@@ -12,21 +12,26 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:"cadastrar-user",
+    path: "cadastrar-user",
     component: CadastroUserComponent
   },
   {
-    path:"cadastrar-game",
+    path: "cadastrar-game",
     component: CadastroGameComponent
   },
   {
-    path:"games-list",
-    component:ListagemGameComponent
+    path: "games-list",
+    component: ListagemGameComponent
   },
   {
-    path:"users-list",
+    path: "users-list",
     component: ListagemUserComponent
+  },
+  {
+    path: "editaruser/:id",
+    component: CadastroUserComponent
   }
+
 ];
 
 @NgModule({

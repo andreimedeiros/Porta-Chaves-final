@@ -13,13 +13,13 @@
       <mat-card-content>
         E-mail: {{user.email}}
       </mat-card-content>
-      <!-- <mat-card-actions>
-        <button mat-icon-button (click)="removerUsuario(usuario)">
+      <mat-card-actions>
+        <button mat-icon-button (click)="removerUser(user)">
           <mat-icon>delete</mat-icon>
         </button>
-        <button mat-icon-button [routerLink]="['/editausuario', usuario.id]">
+        <button mat-icon-button [routerLink]="['/editaruser', user.cpf]">
           <mat-icon>edit</mat-icon>
         </button>
-      </mat-card-actions> -->
+      </mat-card-actions>
     </mat-card>
   </div>
