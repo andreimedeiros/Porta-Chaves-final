@@ -25,11 +25,11 @@ export class ListagemUserComponent implements OnInit {
   }
 
   removerUser(user: User): void {
-    const id = user.cpf || '';
+    const id = user.id || '';
     this.userService.removerUser(id).subscribe(
       removido => {
         console.log(removido);
-        const indxUsuario = this.users.findIndex(u => u.cpf === user.cpf);
+        const indxUsuario = this.users.findIndex(u => u.id === user.id);
 
         if (indxUsuario > -1) {
           this.users.splice(indxUsuario, 1);
