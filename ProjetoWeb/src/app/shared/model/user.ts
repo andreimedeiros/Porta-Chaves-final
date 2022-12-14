@@ -1,5 +1,5 @@
 class User {
-    id: string;
+    id?: string;
     cpf: string
     nome: string;
     idade: number;

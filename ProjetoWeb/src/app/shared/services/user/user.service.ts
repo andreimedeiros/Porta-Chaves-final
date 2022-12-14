@@ -31,14 +31,14 @@ export class UserService {
     return this.httpClientUsers.delete(`${this.URL_USER}/${idremover}`);
   }
 
-//   pesquisarPorId(id: string): Observable<User> {
-//     return this.httpClientUsers.get<User>(`${this.URL_USER}/${id}`);
-//   }
+  pesquisarPorId(id: string): Observable<User> {
+    return this.httpClientUsers.get<User>(`${this.URL_USER}/${id}`);
+  }
 
-//   atualizar(user: User): Observable<User> {
-//     return this.httpClientUsers
-//       .put<User>(`${this.URL_USER}/${user.id}`, user);
-//   }
+  atualizar(user: User): Observable<User> {
+    return this.httpClientUsers
+      .put<User>(`${this.URL_USER}/${user.id}`, user);
+  }
  }
 
 
