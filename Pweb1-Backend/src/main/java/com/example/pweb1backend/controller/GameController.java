@@ -25,10 +25,15 @@ public class GameController {
     }
 
     @PostMapping("/games")
-    @PutMapping("/games")
-    public Game InserirouAtualizarGame(@RequestBody Game game) {
+
+    public Game InserirGame(@RequestBody Game game) {
         return this.gameService.InserirouAtualizarGame(game);
 
+    }
+
+    @PutMapping("/games/{id}")
+    public Game AtualizarGame(@RequestBody Game game) {
+        return this.gameService.InserirouAtualizarGame(game);
     }
 
     @DeleteMapping("/games/{id}")

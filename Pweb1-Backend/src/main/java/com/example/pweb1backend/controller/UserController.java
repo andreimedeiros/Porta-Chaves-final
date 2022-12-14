@@ -30,10 +30,16 @@ public class UserController {
 
 
     @PostMapping("/users")
-    @PutMapping("/users")
-    public User InserirouAtualizarUser(@RequestBody User user){
+
+    public User InserirUser(@RequestBody User user){
         return this.userService.InserirouAtualizarUser(user);
     }
+
+    @PutMapping("/users/{id}")
+    public User AtualizarUser(@RequestBody User user){
+        return this.userService.InserirouAtualizarUser(user);
+    }
+
 
     @DeleteMapping("/users/{id}")
     public void apagarUsuario(@PathVariable("id") Long idUser) {
