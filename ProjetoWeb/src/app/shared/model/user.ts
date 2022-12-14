@@ -1,17 +1,17 @@
 class User {
     id?: string;
-    cpf: string
-    nome: string;
-    idade: number;
-    email: string;
+    cpf?: string
+    nome?: string;
+    idade?: number;
+    email?: string;
 
 
-    constructor(id: string, cpf: string, nome: string, idade: number, email: string) {
+    constructor(id?: string, user: User = {}) {
         this.id = id;
-        this.cpf = cpf
-        this.nome = nome;
-        this.idade = idade;
-        this.email = email;
+        this.cpf = user.cpf
+        this.nome = user.nome;
+        this.idade = user.idade;
+        this.email = user.email;
 
 
     }

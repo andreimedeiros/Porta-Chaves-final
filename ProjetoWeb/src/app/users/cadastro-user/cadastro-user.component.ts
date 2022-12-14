@@ -19,55 +19,67 @@ export class CadastroUserComponent implements OnInit {
   
 
 
-  // constructor(private userService: UserService, private routerOn: ActivatedRoute) { 
-  //   this.user = new User('','',0,'');
-  //   if (routerOn.snapshot.paramMap.has('id')) {
-  //     const idEdicao = routerOn.snapshot.paramMap.get('id');
-  //     if (idEdicao) {
-  //       this.inserting = false;
-  //       this.nomeBotao = 'Atualizar';
-  //       const userFind = this.userService.pesquisarPorId(idEdicao).subscribe(
-  //         userFind => this.user = userFind
-  //       );
-  //     }
-  //   }
-  // }
-
-  constructor(private userService: UserService) { 
-    this.user = new User('','','',0,'');
-    // this.users =  userService.listar()
-
+  constructor(private userService: UserService, private routerOn: ActivatedRoute) { 
+    this.user = new User('');
+    if (routerOn.snapshot.paramMap.has('id')) {
+      const idEdicao = routerOn.snapshot.paramMap.get('id');
+      if (idEdicao) {
+        this.inserting = false;
+        this.nomeBotao = 'Atualizar';
+        const userFind = this.userService.pesquisarPorId(idEdicao).subscribe(
+          userFind => this.user = userFind
+        );
+      }
+    }
   }
+
+ 
 
 
   ngOnInit(): void {
   }
 
 
-  adicionarUser(): void {
-    this.userService.inserir(this.user).subscribe(
-      userobs => console.log(userobs)
-    )
-    this.user = new User('','','',0,'');
+InserirouAtualizarUser() {
+  console.log(this.user.id);
+    if (this.inserting) {
+      this.userService.inserir(this.user).subscribe(
+        userobs => console.log(userobs));
+      // this.userService.inserir(this.user).subscribe(
+        // usuarioInserido => this.mensagemService.info('Usuário cadastrado com sucesso!')
+      // );
+      this.user = new User('');
+    } else {
+      this.userService.atualizar(this.user).subscribe(
+        userobs => console.log(userobs));
+        console.log("Atualizando")
+      }
+      // this.userService.atualizar(this.user).subscribe(
+      //   // usuarioAtualizado => this.mensagemService.erro('Usuário atualizado com sucesso!')
+      // )
   }
 
-}
-
-
-  // InserirouAtualizarUser() {
-  //   if (this.inserting) {
-  //     this.userService.inserir(this.user)
-  //     // this.userService.inserir(this.user).subscribe(
-  //       // usuarioInserido => this.mensagemService.info('Usuário cadastrado com sucesso!')
-  //     // );
-  //     this.user = new User('','',0,'');
-  //   } else {
-  //     this.userService.atualizar(this.user);
-  //     // this.userService.atualizar(this.user).subscribe(
-  //     //   // usuarioAtualizado => this.mensagemService.erro('Usuário atualizado com sucesso!')
-  //     // )
-  //   }
-  // }
-
   
+
+
+
+
+
+
+/*  CÓDIGOS ANTIGOS */
+
+ // constructor(private userService: UserService) { 
+  //   this.user = new User('');
+  //   // this.users =  userService.listar()
+
+  // }
+  
+
+  // adicionarUser(): void {
+  //   this.userService.inserir(this.user).subscribe(
+  //     userobs => console.log(userobs)
+  //   )
+  //   this.user = new User('');
+  // }
+}
 

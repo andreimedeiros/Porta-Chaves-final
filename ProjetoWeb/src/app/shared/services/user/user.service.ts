@@ -36,8 +36,7 @@ export class UserService {
   }
 
   atualizar(user: User): Observable<User> {
-    return this.httpClientUsers
-      .put<User>(`${this.URL_USER}/${user.id}`, user);
+    return this.httpClientUsers.put<User>(`${this.URL_USER}/${user.id}`, user);
   }
  }
 
