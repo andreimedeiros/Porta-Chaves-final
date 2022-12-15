@@ -5,6 +5,7 @@ import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserAnimationsModule,

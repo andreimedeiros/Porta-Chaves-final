@@ -1,0 +1,20 @@
+<div class="img-logo">
+    <h3>LOGIN</h3>
+  </div>
+  <div class="form" f>
+    <form [formGroup]="formLogin" (ngSubmit)="login()">
+      <h1> Seja Bem-Vindo</h1>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="email">
+      </mat-form-field>
+      <mat-form-field  appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input formControlName="senha" matInput type="password">
+      </mat-form-field>
+  
+      <div class="button">
+        <button mat-flat-button color="accent" type="submit" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>

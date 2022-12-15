@@ -38,8 +38,10 @@ export class UserService {
   atualizar(user: User): Observable<User> {
     return this.httpClientUsers.put<User>(`${this.URL_USER}/${user.id}`, user);
   }
- }
-
+  autenticar(email: string, senha: string): Observable<User[]>{
+    return this.httpClientUsers.get<User[]>(`${this.URL_USER}?email=${email}&senha=${senha}`)
+  }
+}
 
 
   

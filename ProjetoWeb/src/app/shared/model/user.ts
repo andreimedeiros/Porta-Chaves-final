@@ -4,6 +4,7 @@ class User {
     nome?: string;
     idade?: number;
     email?: string;
+    senha?: string
 
 
     constructor(id?: string, user: User = {}) {
@@ -12,6 +13,7 @@ class User {
         this.nome = user.nome;
         this.idade = user.idade;
         this.email = user.email;
+        this.senha = user.senha;
 
 
     }
