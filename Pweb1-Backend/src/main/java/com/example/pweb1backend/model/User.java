@@ -11,7 +11,7 @@ public class User {
 
     private String cpf;
     private String nome;
-    private Number idade;
+    private String senha;
     private String email;
 
     public Long getId() {
@@ -38,12 +38,12 @@ public class User {
         this.nome = nome;
     }
 
-    public Number getIdade() {
-        return idade;
+    public Number getSenha() {
+        return senha;
     }
 
-    public void setIdade(Number idade) {
-        this.idade = idade;
+    public void setSenha(Number senha) {
+        this.senha = senha;
     }
 
     public String getEmail() {

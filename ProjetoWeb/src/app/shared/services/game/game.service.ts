@@ -32,6 +32,13 @@ export class GameService {
     return this.httpClientGames.get<Game>(`${this.URL_GAME}/${codigo}`);
   }
 
+  buscarGame(game:string): Observable<Game[]> {
+    const gamenome = game.toLowerCase()
+    return this.httpClientGames.get<Game[]>(`${this.URL_GAME}?nome=${gamenome}`);
+
+  }
+
+
   atualizar(game: Game): Observable<Game> {
     return this.httpClientGames
       .put<Game>(`${this.URL_GAME}/${game.codigo}`, game);
