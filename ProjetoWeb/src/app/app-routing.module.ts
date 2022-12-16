@@ -25,7 +25,7 @@ const routes: Routes = [
   {
     path: "cadastrar-game",
     component: CadastroGameComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     // data: [redirectUnauthorizedTo]
   },
   {

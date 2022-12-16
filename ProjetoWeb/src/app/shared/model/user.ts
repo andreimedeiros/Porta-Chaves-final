@@ -1,10 +1,13 @@
+import { Key } from "./key";
+
 class User {
     id?: string;
-    cpf?: string
     nome?: string;
+    cpf?: string
     idade?: number;
     email?: string;
-    senha?: string
+    senha?: string;
+    keys?: Key[]; 
 
 
     constructor(id?: string, user: User = {}) {

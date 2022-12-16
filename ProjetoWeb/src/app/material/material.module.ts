@@ -26,7 +26,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatDatepickerModule,
     MatButtonModule,
     MatCardModule,
-    CommonModule
+    CommonModule,
   ],
   exports: [
     MatBadgeModule,

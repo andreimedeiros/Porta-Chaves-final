@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import User from 'src/app/shared/model/user';
 import { UserFirestoreService } from 'src/app/shared/services/firestore/user/user-firestore.service';
+import { MensagemService } from 'src/app/shared/services/mensagem/mensagem.service';
 import { UserService } from 'src/app/shared/services/user/user.service';
 
 
@@ -19,7 +20,7 @@ export class CadastroUserComponent implements OnInit {
   
 
 
-  constructor(private userService: UserService, private routerOn: ActivatedRoute) { 
+  constructor(private userService: UserService, private routerOn: ActivatedRoute, private mensagemService: MensagemService) { 
     this.user = new User('');
     if (routerOn.snapshot.paramMap.has('id')) {
       const idEdicao = routerOn.snapshot.paramMap.get('id');
@@ -43,20 +44,19 @@ export class CadastroUserComponent implements OnInit {
 InserirouAtualizarUser() {
   console.log(this.user.id);
     if (this.inserting) {
-      this.userService.inserir(this.user).subscribe(
-        userobs => console.log(userobs));
       // this.userService.inserir(this.user).subscribe(
-        // usuarioInserido => this.mensagemService.info('Usuário cadastrado com sucesso!')
-      // );
+      //   userobs => console.log(userobs));
+      this.userService.inserir(this.user).subscribe(
+        usuarioInserido => this.mensagemService.info("Usuário cadastrado com sucesso!"));
       this.user = new User('');
     } else {
+      // this.userService.atualizar(this.user).subscribe(
+      //   userobs => console.log(userobs));
       this.userService.atualizar(this.user).subscribe(
-        userobs => console.log(userobs));
+        usuarioAtualizado => this.mensagemService.error('Usuário atualizado com sucesso!')
+        )
         console.log("Atualizando")
       }
-      // this.userService.atualizar(this.user).subscribe(
-      //   // usuarioAtualizado => this.mensagemService.erro('Usuário atualizado com sucesso!')
-      // )
   }
 
   

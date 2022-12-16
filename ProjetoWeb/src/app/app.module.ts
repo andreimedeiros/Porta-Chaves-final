@@ -13,6 +13,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FirestoreModule } from './firestore/firestore.module';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 
 
 
@@ -37,9 +40,12 @@ import { FirestoreModule } from './firestore/firestore.module';
     InterfaceModule,
     HttpClientModule,
     FirestoreModule,
+    MatSnackBarModule
+
 
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

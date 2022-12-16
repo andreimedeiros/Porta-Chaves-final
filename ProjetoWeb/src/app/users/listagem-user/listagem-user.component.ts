@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import User from 'src/app/shared/model/user';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/shared/services/user/user.service';
+import { MensagemService } from 'src/app/shared/services/mensagem/mensagem.service';
 
 @Component({
   selector: 'app-listagem-user',
@@ -14,7 +15,7 @@ export class ListagemUserComponent implements OnInit {
 
   users: Array<User>;
 
-  constructor(private userService: UserService, private roteador: Router  ) { 
+  constructor(private userService: UserService, private roteador: Router, private mensagemService: MensagemService  ) { 
     this.users = [];
   }
 
@@ -30,6 +31,8 @@ export class ListagemUserComponent implements OnInit {
       removido => {
         console.log(removido);
         const indxUsuario = this.users.findIndex(u => u.id === user.id);
+        this.mensagemService.warning("Usuário Removido com Sucesso.")
+
 
         if (indxUsuario > -1) {
           this.users.splice(indxUsuario, 1);

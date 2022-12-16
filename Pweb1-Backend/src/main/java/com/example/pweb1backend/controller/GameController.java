@@ -25,7 +25,6 @@ public class GameController {
     }
 
     @PostMapping("/games")
-
     public Game InserirGame(@RequestBody Game game) {
         return this.gameService.InserirouAtualizarGame(game);
 
