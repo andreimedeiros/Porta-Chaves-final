@@ -15,7 +15,7 @@ export class CadastroGameComponent implements OnInit {
   // games: Array<Game>;
 
   constructor(private gameService: GameService) { 
-    this.game = new Game('','','');
+    this.game = new Game('','','',[]);
     // this.games = gameService.listar();
   }
 
@@ -29,7 +29,7 @@ export class CadastroGameComponent implements OnInit {
     this.gameService.inserir(this.game).subscribe(
       jogoobs => console.log(jogoobs)
     )
-    this.game = new Game('','','');
+    this.game = new Game('','','',[]);
 
   }
 }

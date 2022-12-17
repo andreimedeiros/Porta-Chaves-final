@@ -8,10 +8,11 @@ export class Game {
     keys?: Key[];
 
 
-    constructor(codigo: string, nome: string, genero: string) {
+    constructor(codigo: string, nome: string, genero: string, keys: Key[]) {
         this.codigo = codigo;
         this.nome = nome;
-        this.genero = genero
+        this.genero = genero;
+        this.keys = keys
     }
 
 }
