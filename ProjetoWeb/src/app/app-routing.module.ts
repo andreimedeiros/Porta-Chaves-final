@@ -9,6 +9,7 @@ import { ListagemUserComponent } from './users/listagem-user/listagem-user.compo
 import { redirectUnauthorizedTo } from "@angular/fire/auth-guard";
 import { AngularFireAuthGuard } from "@angular/fire/compat/auth-guard";
 import { LoginUserComponent } from './users/login-user/login-user.component';
+import { CadastroKeysComponent } from './keys/cadastro-keys/cadastro-keys.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: "editaruser/:id",
     component: CadastroUserComponent
+  },
+  {
+    path: "cadastrar-key",
+    component: CadastroKeysComponent
   },
   {
     path: "login",

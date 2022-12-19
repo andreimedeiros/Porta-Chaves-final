@@ -2,6 +2,8 @@ package com.example.pweb1backend.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_user")
 public class User {
@@ -13,6 +15,13 @@ public class User {
     private String nome;
     private String senha;
     private String email;
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    // @JoinColumn(name = "user")
+    private List<Key> keys;
+
+
 
     public Long getId() {
         return id;
@@ -34,15 +43,23 @@ public class User {
         return nome;
     }
 
+    public List<Key> getKeys() {
+        return keys;
+    }
+
+    public void setKeys(List<Key> keys) {
+        this.keys = keys;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public Number getSenha() {
+    public String getSenha() {
         return senha;
     }
 
-    public void setSenha(Number senha) {
+    public void setSenha(String senha) {
         this.senha = senha;
     }
 

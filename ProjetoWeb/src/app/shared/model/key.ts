@@ -4,18 +4,21 @@ import User from "./user";
 export class Key {
 
     id? :string;
-    codigo?: string;
-    preco?: Number;
-    user?: User;
-    game?: Game
-    // id_game?: string
-    // id_user?: string;
-
-    constructor(id?: string, key: Key = {}) {
-        this.codigo = key.codigo;
-        this.preco = key.preco;
-        this.user = key.user;
-        this.game = key.game;
-   
+    codigo: string;
+    preco: Number;
+    user_id: string
+    game_id: string;
+    
+    // user: User;
+    // game: Game;
+    constructor(codigo: string, preco: Number, user_id: string, game_id: string, id?: string) {
+        this.id = id;
+        this.codigo = codigo;
+        this.preco = preco;
+        this.user_id = user_id;
+        this.game_id = game_id;
+        
+        // this.user = user;
+        // this.game = game;
     }
 }

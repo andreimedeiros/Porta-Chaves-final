@@ -2,10 +2,10 @@ import { Key } from "./key";
 
 class User {
     id?: string;
+    cpf?: string;
     nome?: string;
-    cpf?: string
-    senha?: string;
     email?: string;
+    senha?: string;
     keys?: Key[]; 
 
 

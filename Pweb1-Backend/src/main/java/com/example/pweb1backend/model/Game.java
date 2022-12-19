@@ -2,6 +2,8 @@ package com.example.pweb1backend.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "tb_game")
 public class Game {
@@ -11,6 +13,14 @@ public class Game {
     private String codigo;
     private String nome;
     private String genero;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "game")
+    @JoinColumn(name = "game_id")
+    private List<Key> keys;
+
+
+
+
 
     public Long getId() {
         return id;
@@ -42,6 +52,14 @@ public class Game {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public List<Key> getKeys() {
+        return keys;
+    }
+
+    public void setKeys(List<Key> keys) {
+        this.keys = keys;
     }
 }
 

@@ -19,9 +19,8 @@ import { ListagemKeysComponent } from './listagem-keys/listagem-keys.component';
   declarations: [
     CadastroKeysComponent,
     ListagemKeysComponent
-
-   
   ],
+
   imports: [
     FormsModule,
     MaterialModule,
@@ -40,4 +39,5 @@ import { ListagemKeysComponent } from './listagem-keys/listagem-keys.component';
   ]
 
 })
+
 export class KeysModule { }
