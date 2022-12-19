@@ -15,8 +15,9 @@ public class Game {
     private String genero;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "game")
-    @JoinColumn(name = "game_id")
+    //@JoinColumn(name = "game_id")
     private List<Key> keys;
+
 
 
 

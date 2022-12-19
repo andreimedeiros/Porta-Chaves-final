@@ -68,7 +68,7 @@ export class KeysService {
     this.keyenvio.game = game;
     this.keyenvio.user = user;
 
-    return this.httpClientKeys.post<Key>(this.URL_KEY, this.keyenvio)
+    return this.httpClientKeys.post<KeyEnvio>(this.URL_KEY, this.keyenvio)
   }
 
 
