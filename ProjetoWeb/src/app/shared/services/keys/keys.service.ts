@@ -54,21 +54,20 @@ export class KeysService {
   // }
 
 
-   inserir(key: Key): Observable<KeyEnvio> {
-    let gameid = key.game_id;
-    let userid = key.user_id;
+   inserir(key: Key): Observable<Key> {
 
+    // let gameid = key.game_id;
+    // let userid = key.user_id;
 
+    // const game: any = this.gameService.pesquisarPorCodigo(gameid); 
+    // const user: any = this.userService.pesquisarPorId(userid);
 
-    const game: any = this.gameService.pesquisarPorCodigo(gameid); 
-    const user: any = this.userService.pesquisarPorId(userid);
+    // this.keyenvio.codigo = key.codigo;
+    // this.keyenvio.preco = key.preco;
+    // this.keyenvio.game = game;
+    // this.keyenvio.user = user;
 
-    this.keyenvio.codigo = key.codigo;
-    this.keyenvio.preco = key.preco;
-    this.keyenvio.game = game;
-    this.keyenvio.user = user;
-
-    return this.httpClientKeys.post<KeyEnvio>(this.URL_KEY, this.keyenvio)
+    return this.httpClientKeys.post<Key>(this.URL_KEY, key)
   }
 
 
