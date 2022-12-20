@@ -23,7 +23,7 @@ body {
 
 #searchbarhome input {
     margin-top: 5rem;
-    padding: 1.3rem 0 ;
+    padding: 1.3rem 0;
     background-color: #404040;
     color: #707070;
     border-radius: 16px;
@@ -39,11 +39,81 @@ body {
     position: absolute;
     color: #707070;
 }
-.content-test{
+
+.content-test {
     margin-top: 8rem;
     gap: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
+}
+
+
+// SECÃO DOS GÊNEROS DOS JOGOS
+
+
+
+// SEÇÃO DOS JOGOS
+
+.top-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top-image-img {
+    border-radius: 2%;
+}
+
+.top-game-prnts {
+    display: flex;
+    justify-content: center;
+}
+
+.top-game-prnts {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../assets/Images/M&B2_01.jpg');
+    height: 443px;
+    width: 788px;
+    animation: changeImage;
+    animation-duration: 20s;
+    animation-delay: 2s;
+    /* animation-fill-mode: forwards; */
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+}
+
+@keyframes changeImage {
+    0% {
+        background-image: url('../../../assets/Images/M&B2_01.jpg'), url('../../../assets/Images/M&B2_02.jpg');
+    }
+
+    25% {
+        background-image: url('../../../assets/Images/M&B2_02.jpg'), url('../../../assets/Images/M&B2_03.jpg');
+
+    }
+
+    50% {
+        background-image: url('../../../assets/Images/M&B2_03.jpg'), url('../../../assets/Images/M&B2_04.jpg');
+    }
+
+    75% {
+        background-image: url('../../../assets/Images/M&B2_04.jpg'), url('../../../assets/Images/M&B2_05.jpg');
+    }
+}
+
+.top-game-prnts img {
+    border-radius: 3%;
+
+}
+
+.top-game-prnts img:hover {
+    transform: scale(1.25);
+    transition: .3s;
+
 }
