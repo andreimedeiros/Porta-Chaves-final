@@ -5,9 +5,9 @@
         <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
     
 
-    <button id="botaosessao" [routerLink]="['/login']">
+    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']">
         <mat-icon aria-hidden="false" fontIcon="person_outline"></mat-icon>
-        Iniciar Sessão
+        {{botaonome}}
     </button>
 
     <button id="botaomenu" mat-button [matMenuTriggerFor]="menu">Menu</button>

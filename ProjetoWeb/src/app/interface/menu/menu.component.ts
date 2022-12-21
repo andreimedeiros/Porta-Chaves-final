@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,8 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
 
+  
+
+  botaonome = "Iniciar Sessão"
+  logado= false
+
+
+  constructor(private routerOn: ActivatedRoute) { 
+    if (window.localStorage.getItem("token")) {
+    this.botaonome = "Log out"
+    this.logado = true
+  }
+  }
   ngOnInit(): void {
   }
 
