@@ -8,6 +8,7 @@
 
 body {
     background-color: #262626;
+    height: 2500px;
 }
 
 .container {
@@ -72,6 +73,7 @@ body {
 }
 
 .top-game-prnts {
+    border-radius: 3%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -117,3 +119,22 @@ body {
     transition: .3s;
 
 }
+
+.second-games {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+
+.second-games div {
+    display: flex;
+    gap: 2rem;
+}
+
+.second-games img {
+    border-radius: 3%;
+}
+
+
+

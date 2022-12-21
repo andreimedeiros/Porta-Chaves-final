@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroGameComponent } from './games/cadastro-game/cadastro-game.component';
 import { ListagemGameComponent } from './games/listagem-game/listagem-game.component';
@@ -10,6 +10,7 @@ import { redirectUnauthorizedTo } from "@angular/fire/auth-guard";
 import { AngularFireAuthGuard } from "@angular/fire/compat/auth-guard";
 import { LoginUserComponent } from './users/login-user/login-user.component';
 import { CadastroKeysComponent } from './keys/cadastro-keys/cadastro-keys.component';
+import { PaginaGameComponent } from './games/pagina-game/pagina-game.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: "login",
     component: LoginUserComponent
+  },
+  {
+    path: "game/mount&blade",
+    component: PaginaGameComponent
   }
 
 ];

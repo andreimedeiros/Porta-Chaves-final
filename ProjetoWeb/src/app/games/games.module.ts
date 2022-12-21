@@ -7,13 +7,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginaGameComponent } from './pagina-game/pagina-game.component';
 
 
 
 @NgModule({
   declarations: [
     CadastroGameComponent,
-    ListagemGameComponent
+    ListagemGameComponent,
+    PaginaGameComponent
   ],
   imports: [
     MaterialModule,
