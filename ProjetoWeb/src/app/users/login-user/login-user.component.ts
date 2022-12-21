@@ -28,10 +28,11 @@ export class LoginUserComponent implements OnInit {
   logIn() {
   if (window.localStorage.getItem("token")) {
     this.mensagemService.info("Já existe um usuário logado")
-  } else {
+  } else if (this.login.email != null && this.login.senha != null && this.login.senha != ''){
     window.localStorage.setItem("token", this.login.email)
     window.localStorage.setItem("senha", this.login.senha)
-
+  } else {
+    this.mensagemService.error("Erro ao fazer login. Usuário ou senha inválidos")
   }
 
 

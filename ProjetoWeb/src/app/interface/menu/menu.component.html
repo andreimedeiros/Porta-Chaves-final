@@ -5,7 +5,7 @@
         <mat-icon aria-hidden="false" fontIcon="shopping_cart"></mat-icon>
     
 
-    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']">
+    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']" (click)="logOut()">
         <mat-icon aria-hidden="false" fontIcon="person_outline"></mat-icon>
         {{botaonome}}
     </button>
