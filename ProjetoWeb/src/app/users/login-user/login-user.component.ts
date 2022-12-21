@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder, FormControl } from "@angular/forms";
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { Component, Inject, Injector, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { Login } from 'src/app/shared/model/login';
+import { MensagemService } from 'src/app/shared/services/mensagem/mensagem.service';
+
+
+
 
 @Component({
   selector: 'app-login-user',
@@ -10,35 +13,31 @@ import { Router } from "@angular/router";
 })
 export class LoginUserComponent implements OnInit {
 
-  formLogin: FormGroup
+  login: Login
 
-  constructor(private formBuilder: FormBuilder,
-    private auth: AuthService, private roteador: Router) {
-    this.formLogin = formBuilder.group({
-      // email: [''],
-      // senha: ['']
-      email: ['', Validators.compose([Validators.required, Validators.email])],
-      senha: ['', Validators.compose([Validators.required])]
-    })
-
-  }
+  constructor( private roteador: Router, private mensagemService: MensagemService) {
+  this.login = new Login('','')
+  } 
 
   ngOnInit(): void {
   }
 
-  
 
 
-  login() {
-    if (this.formLogin.valid) {
-      // @ts-ignore
-      this.auth.login(this.formLogin.value).then((user) => {
-        this.roteador.navigate([''])
-        console.log(`Usuário logado com sucesso`)
-      }).catch(() => {
-        console.log('Error ao autenticar, verifique email e senha')
-      })
-    }
+
+  logIn() {
+  if (window.localStorage.getItem("token")) {
+    this.mensagemService.info("Já existe um usuário logado")
+  } else {
+    window.localStorage.setItem("token", this.login.email)
+    window.localStorage.setItem("senha", this.login.senha)
+
+  }
+
+
+
+
+
 
   }
 

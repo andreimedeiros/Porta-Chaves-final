@@ -21,7 +21,14 @@ export class MenuComponent implements OnInit {
     this.logado = true
   }
   }
+
   ngOnInit(): void {
   }
 
+  logOut() {
+    if (window.localStorage.getItem("token")) {
+      window.localStorage.clear();
+    }
+
+}
 }
