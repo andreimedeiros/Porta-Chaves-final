@@ -10,3 +10,16 @@
 .inputcartao input {
     padding: .5rem;
 }
+
+#cardtitle {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#piximg:hover {
+    transform: scale(.5);
+    transform: scale(1.4);
+    transition: .5s;
+}

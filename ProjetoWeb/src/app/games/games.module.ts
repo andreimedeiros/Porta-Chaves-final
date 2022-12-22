@@ -7,8 +7,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { PaginaGameComponent } from './pagina-game/pagina-game.component';
 import { CompraGameComponent } from './compra-game/compra-game.component';
+import { MountandbladeComponent } from './games/mountandblade/mountandblade.component';
 
 
 
@@ -16,8 +16,8 @@ import { CompraGameComponent } from './compra-game/compra-game.component';
   declarations: [
     CadastroGameComponent,
     ListagemGameComponent,
-    PaginaGameComponent,
-    CompraGameComponent
+    CompraGameComponent,
+    MountandbladeComponent
   ],
   imports: [
     MaterialModule,
@@ -28,7 +28,8 @@ import { CompraGameComponent } from './compra-game/compra-game.component';
     HttpClientModule
   ],
   exports: [
-    CadastroGameComponent
+    CadastroGameComponent,
+    ListagemGameComponent
   ]
 })
 export class GamesModule { }

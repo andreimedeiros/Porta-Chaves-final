@@ -10,8 +10,9 @@ import { redirectUnauthorizedTo } from "@angular/fire/auth-guard";
 import { AngularFireAuthGuard } from "@angular/fire/compat/auth-guard";
 import { LoginUserComponent } from './users/login-user/login-user.component';
 import { CadastroKeysComponent } from './keys/cadastro-keys/cadastro-keys.component';
-import { PaginaGameComponent } from './games/pagina-game/pagina-game.component';
 import { ListagemKeysComponent } from './keys/listagem-keys/listagem-keys.component';
+import { MountandbladeComponent } from './games/games/mountandblade/mountandblade.component';
+import { CompraGameComponent } from './games/compra-game/compra-game.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
@@ -50,7 +51,9 @@ const routes: Routes = [
   },
   {
     path: "editarkey/:id",
-    component: CadastroKeysComponent
+    component: CadastroKeysComponent,
+    canActivate: [AuthGuard],
+    data: [redirectUnauthorizedTo]
   },
   {
     path: "keys-list",
@@ -62,8 +65,29 @@ const routes: Routes = [
   },
   {
     path: "game/mount&blade",
-    component: PaginaGameComponent
+    component: MountandbladeComponent
+  },
+  {
+    path: "game/cod3",
+    component: MountandbladeComponent
+  },
+  {
+    path: "the_witcher3",
+    component: MountandbladeComponent
+  },
+  {
+    path: "game/tropico6",
+    component: MountandbladeComponent
+  },
+  {
+    path: "game/sekiro",
+    component: MountandbladeComponent
+  },
+  {
+    path: "compra-game-key/:id",
+    component: CompraGameComponent
   }
+
 
 ];
 

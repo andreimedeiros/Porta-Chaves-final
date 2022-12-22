@@ -36,10 +36,28 @@
 
     <mat-card>
         <mat-card-header>
-            <mat-card-title>Pague com Pix</mat-card-title>
-            <img src="../../../assets/Images/pix.png" alt="piximage">
-            <img src="../../../assets/Images/qrcode.png" alt="qrimage">
+            <mat-card-title>{{key.preco}}</mat-card-title>
         </mat-card-header>
+    </mat-card>
+    
+
+    <!-- <mat-card>
+        <mat-card-header>
+            <mat-card-title id="cardtitle" (click)="toggleData()">Ou Pague com Pix<img id="piximg" src="../../../assets/Images/pix.png" alt="piximage"></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput name="preco" placeholder="Nome">
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input matInput name="CPF" type="text" placeholder="CPF">
+            </mat-form-field>
+            <div *ngIf="toDisplay">
+                <img src="../../../assets/Images/qrcode.png" alt="qrimage">
+            </div>
+        </mat-card-content> -->
 
     </mat-card>
 

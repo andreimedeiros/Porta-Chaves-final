@@ -23,13 +23,7 @@ public class Key {
 
     private String user_email;
 
-
     private String game_id;
-
-
-  
-
-
 
     public Long getId() {
         return id;
@@ -55,27 +49,27 @@ public class Key {
         this.preco = preco;
     }
 
-    public String getUserId() {
+    public String getUser_id() {
         return user_id;
     }
 
-    public void setUserId(String user_id) {
+    public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
 
-    public void setUserEmail(String user_email) {
-        this.user_email = user_email
+    public String getUser_email() {
+        return user_email;
     }
 
-    public String getUserEmail() {
-        return user_email
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 
-    public String getGameId() {
+    public String getGame_id() {
         return game_id;
     }
 
-    public void setGame(String game_id) {
-        this.game = game_id;
+    public void setGame_id(String game_id) {
+        this.game_id = game_id;
     }
 }

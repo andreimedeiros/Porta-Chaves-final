@@ -1,10 +1,7 @@
 package com.example.pweb1backend.controller;
 
 
-import com.example.pweb1backend.model.Game;
 import com.example.pweb1backend.model.Key;
-import com.example.pweb1backend.model.KeyDTO;
-import com.example.pweb1backend.model.User;
 import com.example.pweb1backend.service.GameService;
 import com.example.pweb1backend.service.KeyService;
 import com.example.pweb1backend.service.UserService;
@@ -20,12 +17,6 @@ public class KeyController {
     @Autowired
     private KeyService keyService;
 
-    @Autowired
-    private UserService userService;
-
-    @Autowired
-    private GameService gameService;
-
 
     @RequestMapping("/keys")
     public List<Key> listar() {
@@ -40,7 +31,6 @@ public class KeyController {
 
     @PostMapping("/keys")
     public Key InserirKey(@RequestBody Key key) {
-
         return this.keyService.InserirouAtualizarKey(key);
 
     }
