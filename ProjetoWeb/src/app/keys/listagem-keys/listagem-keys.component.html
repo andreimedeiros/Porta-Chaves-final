@@ -1,1 +1,29 @@
-<p>listagem-keys works!</p>
+<p>
+    <mat-icon [matBadge]="keys.length" matBadgeColor="primary">key</mat-icon>
+  </p>
+  
+  <div>
+    <mat-card *ngFor="let key of keys" class="card-game">
+      <mat-card-header>
+        <mat-icon>Key</mat-icon>
+        <mat-card-title>
+          {{key.preco}}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        E-mail do Usuário: {{key.user_email}}
+      </mat-card-content>
+      <!-- <mat-card-content>
+        Keys: {{user.keys.codigo}}
+      </mat-card-content> -->
+      
+      <mat-card-actions>
+        <button mat-icon-button (click)="removerKey(key)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button [routerLink]="['/editarkey', key.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

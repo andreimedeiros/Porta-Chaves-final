@@ -11,6 +11,7 @@ import { AngularFireAuthGuard } from "@angular/fire/compat/auth-guard";
 import { LoginUserComponent } from './users/login-user/login-user.component';
 import { CadastroKeysComponent } from './keys/cadastro-keys/cadastro-keys.component';
 import { PaginaGameComponent } from './games/pagina-game/pagina-game.component';
+import { ListagemKeysComponent } from './keys/listagem-keys/listagem-keys.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
@@ -46,6 +47,14 @@ const routes: Routes = [
     component: CadastroKeysComponent,
     canActivate: [AuthGuard],
     data: [redirectUnauthorizedTo]
+  },
+  {
+    path: "editarkey/:id",
+    component: CadastroKeysComponent
+  },
+  {
+    path: "keys-list",
+    component: ListagemKeysComponent
   },
   {
     path: "login",

@@ -39,35 +39,12 @@ public class KeyController {
 
 
     @PostMapping("/keys")
-    public Key InserirKey(@RequestBody KeyDTO keyDTO) {
-
-
-        Key key = new Key();
-        // KeyDTO keydto = new KeyDTO(keyDTO);
-
-        String gameid = keyDTO.getGame_id();
-        String userid = keyDTO.getUser_id();
-
-        Game game = this.gameService.getGamebyId(Long.valueOf(gameid));
-        User user = this.userService.getUserbyId(Long.valueOf(userid));
-
-        key.setCodigo(keyDTO.getCodigo());
-        key.setPreco((keyDTO.getPreco()));
-        key.setUser(user);
-        key.setGame(game);
-
-        return this.keyService.InserirouAtualizarKey(key);
-
-    }
-
-    /*
-
-    @PostMapping("/keys")
     public Key InserirKey(@RequestBody Key key) {
+
         return this.keyService.InserirouAtualizarKey(key);
+
     }
-    
-    */
+
 
     @PutMapping("/keys/{id}")
     public Key AtualizarKey(@RequestBody Key key) {

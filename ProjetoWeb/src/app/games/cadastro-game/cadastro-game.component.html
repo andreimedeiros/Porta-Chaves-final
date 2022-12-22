@@ -8,7 +8,7 @@
             <form class="formCadastro">             
                 <mat-form-field class="inputGameCadastro" appearance="fill">
                     <mat-label>Código do Jogo</mat-label>
-                    <input matInput [(ngModel)]="game.codigo" name="gamecodigo" placeholder="Nome" type="text">
+                    <input matInput [(ngModel)]="game.codigo" name="gamecodigo" placeholder="Código do Game" type="text">
                 </mat-form-field>
                 <mat-form-field class="inputGameCadastro" appearance="fill">
                     <mat-label>Nome do Jogo</mat-label>
@@ -22,7 +22,7 @@
                 
             </form>
             <mat-card-actions>
-                <button id="botaocadastrar" mat-raised-button color="warn" (click)="adicionarGame()">Cadastrar Jogo Novo</button>
+                <button id="botaocadastrar" mat-raised-button color="warn" (click)="adicionarGame()">Cadastrar Jogo</button>
             </mat-card-actions> 
         </mat-card-content>
         
