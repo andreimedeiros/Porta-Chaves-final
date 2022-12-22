@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginaGameComponent } from './pagina-game.component';
+import { Tw3Component } from './tw3.component';
 
-describe('PaginaGameComponent', () => {
-  let component: PaginaGameComponent;
-  let fixture: ComponentFixture<PaginaGameComponent>;
+describe('Tw3Component', () => {
+  let component: Tw3Component;
+  let fixture: ComponentFixture<Tw3Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PaginaGameComponent ]
+      declarations: [ Tw3Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PaginaGameComponent);
+    fixture = TestBed.createComponent(Tw3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

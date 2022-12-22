@@ -1,0 +1,44 @@
+<div class="game-section">
+    <div>
+        <img src="assets/Images/M&B2.jpg" alt="">
+    </div>
+    <div class="game-section-text">
+        <h1>Mount & Blade 2: Bannerlord</h1>
+        <p>
+            Um RPG de ação/estratégia. Crie um personagem, seja diplomata, fabrique,
+            comercialize e conquiste terras num vasto mundo medieval. Leve seus exércitos a
+            grandes batalhas, comande suas tropas e use sua habilidade para lutar ao lado delas
+            num sistema de combate direcional complexo e intuitivo.
+        </p>
+    </div>
+</div>
+
+<p>
+    <mat-icon [matBadge]="keys.length" matBadgeColor="primary">key</mat-icon>
+</p>
+
+<div>
+    <mat-card *ngFor="let key of keys" class="card-game">
+        <mat-card-header>
+            <!-- <mat-icon>key</mat-icon> -->
+            <mat-card-title>
+                Usuário: {{key.user_email}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            Preço: R$:{{key.preco}},00
+        </mat-card-content>
+
+        <!--<button mat-icon-button (click)="removerKey(key)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button [routerLink]="['/editarkey', key.id]">
+            <mat-icon>edit</mat-icon>
+        </button> -->
+
+        <mat-card-actions>
+            <button id="botaocomprar" mat-raised-button color="warn"
+                [routerLink]="['/compra-game-key', key.id]">Comprar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -19,19 +19,11 @@ public class Key {
     private BigDecimal preco;
 
 
-    @ManyToOne
-    private User user;
+    private String user_id;
 
-    @ManyToOne
-    private Game game;
+    private String user_email;
 
-
-    /*
-    private Long user_id;
-    private Long game_id;
-    */
-
-
+    private String game_id;
 
     public Long getId() {
         return id;
@@ -57,19 +49,27 @@ public class Key {
         this.preco = preco;
     }
 
-    public User getUser() {
-        return user;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public Game getGame() {
-        return game;
+    public String getUser_email() {
+        return user_email;
     }
 
-    public void setGame(Game game) {
-        this.game = game;
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
+    }
+
+    public String getGame_id() {
+        return game_id;
+    }
+
+    public void setGame_id(String game_id) {
+        this.game_id = game_id;
     }
 }

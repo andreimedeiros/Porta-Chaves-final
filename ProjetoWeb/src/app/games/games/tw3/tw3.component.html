@@ -1,0 +1,41 @@
+<div class="game-section">
+    <div>
+        <img src="assets/Images/TW3.jpg" alt="">
+    </div>
+    <div class="game-section-text">
+        <h1>The Witcher 3</h1>
+        <p>
+            Descubra a saga épica de RPG do caçador de
+            monstros em uma nova aventura dos criadores de The Witcher 2.
+
+             Você é Geralt de Rívia, mercenário matador de monstros. 
+             Você está em um continente devastado pela guerra e infestado de 
+             monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a 
+             Criança da Profecia — uma arma viva que pode alterar a forma do mundo. 
+        </p>
+    </div>
+</div>
+
+<p>
+    <mat-icon [matBadge]="keys.length" matBadgeColor="primary">key</mat-icon>
+</p>
+
+<div>
+    <mat-card *ngFor="let key of keys" class="card-game">
+        <mat-card-header>
+            <!-- <mat-icon>key</mat-icon> -->
+            <mat-card-title>
+                Usuário: {{key.user_email}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            Preço: R$:{{key.preco}},00
+        </mat-card-content>
+
+
+        <mat-card-actions>
+            <button id="botaocomprar" mat-raised-button color="warn"
+                [routerLink]="['/compra-game-key', key.id]">Comprar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

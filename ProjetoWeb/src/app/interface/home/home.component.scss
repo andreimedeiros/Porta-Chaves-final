@@ -67,16 +67,25 @@ body img:hover {
     align-items: center;
 }
 
-#top-image-img {
+#top-game-img {
     border-radius: 2%;
+    filter: drop-shadow(15px 10px 5px #000000);
+    margin-bottom: .5rem;
+}
+
+#top-game-img:hover {
+    filter: brightness(120%) drop-shadow(20px 10px #000000);
+}
+
+.top-game-prnts:hover {
+    cursor: pointer;
+    filter: brightness(120%)
+
 }
 
 .top-game-prnts {
     display: flex;
     justify-content: center;
-}
-
-.top-game-prnts {
     border-radius: 3%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,17 +127,21 @@ body img:hover {
 
 }
 
-.top-game-prnts img:hover {
-    transform: scale(1.25);
-    transition: .3s;
-
+.second-games-bar{
+    background-color: rgb(51, 51, 51);
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .second-games {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-   
+
 }
 
 .second-games div {
@@ -139,6 +152,6 @@ body img:hover {
 .second-games img {
     border-radius: 3%;
 }
-
-
-
+.second-games img:hover {
+    filter: brightness(125%)
+}

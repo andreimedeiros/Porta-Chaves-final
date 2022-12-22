@@ -1,36 +1,37 @@
 <mat-card class="cardCadastro">
     <mat-card-header>
-        <mat-card-title>Cadastro de Key</mat-card-title>
+        <mat-card-title>Cadastro da Key</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <form class="formCadastro">
 
-            <!-- <mat-form-field class="inputUserCadastro" appearance="fill">
-                <mat-label>Id</mat-label>
-                <input matInput [(ngModel)]="user.id" name="userid" placeholder="Id">
-            </mat-form-field> -->
+            
             <mat-form-field class="inputKeyCadastro" appearance="fill">
                 <mat-label>Codigo</mat-label>
-                <input matInput [(ngModel)]="key.codigo" name="usercpf" placeholder="cpf">
+                <input matInput [(ngModel)]="key.codigo" name="usercpf" placeholder="Código">
             </mat-form-field>
             <mat-form-field class="inputKeyCadastro" appearance="fill">
                 <mat-label>Preço</mat-label>
-                <input matInput [(ngModel)]="key.preco" name="userid" placeholder="Nome">
+                <input matInput [(ngModel)]="key.preco" name="preco" placeholder="R$:">
             </mat-form-field>
             <mat-form-field class="inputKeyCadastro" appearance="fill">
                 <mat-label>Id do Usuário</mat-label>
-                <input matInput [(ngModel)]="key.user_id" name="usersenha" type="text" placeholder="Id">
+                <input matInput [(ngModel)]="key.user_id" name="userid" placeholder="Id">
+            </mat-form-field>
+            <mat-form-field class="inputKeyCadastro" appearance="fill">
+                <mat-label>Email do Usuário</mat-label>
+                <input matInput [(ngModel)]="key.user_email" name="useremail" placeholder="Email">
             </mat-form-field>
             <mat-form-field class="inputKeyCadastro" appearance="fill">
                 <mat-label>Id do Jogo</mat-label>
-                <input matInput [(ngModel)]="key.game_id" name="useremail" type="email" placeholder="Id">
+                <input matInput [(ngModel)]="key.game_id" name="useremail" placeholder="Id">
                 <mat-icon matSuffix>dit</mat-icon>
             </mat-form-field>
 
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button id="botaocadastrar" mat-raised-button color="warn" (click)="AdiconarKey()">Cadastrar Key</button>
+        <button id="botaocadastrar" mat-raised-button color="warn" (click)="InserirouAtualizarKey()">{{nomeBotao}}</button>
     </mat-card-actions>
 
 

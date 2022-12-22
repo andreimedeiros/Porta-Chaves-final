@@ -32,10 +32,27 @@ public class KeyService {
     }
 
     public Key InserirouAtualizarKey(Key key) {
-
-
-
         return this.keyRepository.save(key);
+    }
+
+    public List<Key> getMB() {
+       return this.keyRepository.getId1();
+    }
+
+    public List<Key> getCOD() {
+        return this.keyRepository.getId2();
+    }
+
+    public List<Key> getTW3() {
+        return this.keyRepository.getId3();
+    }
+
+    public List<Key> getTropico() {
+        return this.keyRepository.getId4();
+    }
+
+    public List<Key> getsekiro() {
+        return this.keyRepository.getId5();
     }
 
 }

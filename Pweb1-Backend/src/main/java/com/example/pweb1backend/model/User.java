@@ -18,12 +18,6 @@ public class User {
     private String email;
 
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    // @JoinColumn(name = "user")
-    private List<Key> keys = new ArrayList<Key>();
-
-
-
 
     public User() {}
 
@@ -53,14 +47,6 @@ public class User {
 
     public String getNome() {
         return nome;
-    }
-
-    public List<Key> getKeys() {
-        return keys;
-    }
-
-    public void setKeys(List<Key> keys) {
-        this.keys = keys;
     }
 
     public void setNome(String nome) {

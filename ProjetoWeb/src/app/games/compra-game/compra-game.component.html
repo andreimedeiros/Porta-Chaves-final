@@ -1,0 +1,67 @@
+<mat-card class="cardCadastro">
+    <mat-card-header>
+        <mat-card-title>Informações do Cartão</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="formCadastro">
+
+            
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>Numero do Cartão</mat-label>
+                <input matInput name="numerocartao" placeholder="Numero">
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput name="preco" placeholder="Nome">
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input matInput name="CPF" type="text" placeholder="CPF">
+                <mat-icon matSuffix>dit</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>Data de Validade</mat-label>
+                <input matInput name="userid" type="text" placeholder="Id">
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>CVC</mat-label>
+                <input matInput  name="cvc" type="text" appearance="fill" placeholder="CVC">
+            </mat-form-field>
+        </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+        <button id="botaocomprar" mat-raised-button color="warn" (click)="toggleData();removerKey(key)">Comprar</button>
+    </mat-card-actions>
+
+    
+    
+
+    <!-- <mat-card>
+        <mat-card-header>
+            <mat-card-title id="cardtitle" ">Ou Pague com Pix<img id="piximg" src="../../../assets/Images/pix.png" alt="piximage"></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput name="preco" placeholder="Nome">
+            </mat-form-field>
+            <mat-form-field class="inputcartao" appearance="fill">
+                <mat-label>CPF</mat-label>
+                <input matInput name="CPF" type="text" placeholder="CPF">
+            </mat-form-field>
+            <div>
+                <img src="../../../assets/Images/qrcode.png" alt="qrimage">
+            </div>
+        </mat-card-content> -->
+
+        <mat-card>
+        <mat-card-header *ngIf="toDisplay">
+            <mat-card-title>Sua chave:</mat-card-title>
+            <mat-card-content id="chave">{{key.codigo}}</mat-card-content>
+        </mat-card-header>
+    </mat-card>
+
+    </mat-card>
+
+

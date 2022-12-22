@@ -6,7 +6,6 @@ class User {
     nome?: string;
     email?: string;
     senha?: string;
-    keys?: Array<Key>; 
 
 
     constructor(id?: string, user: User = {}) {
@@ -15,8 +14,6 @@ class User {
         this.nome = user.nome;
         this.email = user.email;
         this.senha = user.senha;
-        this.keys = user.keys;
-
 
     }
 }

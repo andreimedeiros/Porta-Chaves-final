@@ -5,15 +5,14 @@ export class Game {
     codigo: string;
     nome: string;
     genero: string;
-    keys?: Key[];
+   
 
 
-    constructor(codigo: string, nome: string, genero: string, keys: Key[], id?: string) {
+    constructor(codigo: string, nome: string, genero: string, id?: string) {
         this.id = id;
         this.codigo = codigo;
         this.nome = nome;
         this.genero = genero;
-        this.keys = keys
     }
 
 }

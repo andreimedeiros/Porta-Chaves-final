@@ -15,10 +15,6 @@ public class Game {
     private String nome;
     private String genero;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "game")
-    //@JoinColumn(name = "game_id")
-    private List<Key> keys = new ArrayList<Key>();
-
 
     public Game() {}
 
@@ -61,12 +57,6 @@ public class Game {
         this.genero = genero;
     }
 
-    public List<Key> getKeys() {
-        return keys;
-    }
-
-    public void setKeys(List<Key> keys) {
-        this.keys = keys;
-    }
+   
 }
 
