@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaGameComponent } from './pagina-game/pagina-game.component';
+import { CompraGameComponent } from './compra-game/compra-game.component';
 
 
 
@@ -15,7 +16,8 @@ import { PaginaGameComponent } from './pagina-game/pagina-game.component';
   declarations: [
     CadastroGameComponent,
     ListagemGameComponent,
-    PaginaGameComponent
+    PaginaGameComponent,
+    CompraGameComponent
   ],
   imports: [
     MaterialModule,
