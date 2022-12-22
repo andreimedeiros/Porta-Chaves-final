@@ -23,6 +23,36 @@ public class KeyController {
         return this.keyService.listarKeys();
     }
 
+
+    @RequestMapping("keys/games/keys/1")
+    public List<Key> listarMB() {
+        return this.keyService.getMB();
+    }
+
+    @RequestMapping("keys/games/keys/2")
+    public List<Key> listarCOD() {
+        return this.keyService.getCOD();
+    }
+
+
+    @RequestMapping("keys/games/keys/3")
+    public List<Key> listarTW3() {
+        return this.keyService.getTW3();
+    }
+
+    @RequestMapping("keys/games/keys/4")
+    public List<Key> listarTropico() {
+        return this.keyService.getTropico();
+    }
+
+    @RequestMapping("keys/games/keys/5")
+    public List<Key> listarSekiro() {
+        return this.keyService.getsekiro();
+    }
+
+
+
+
     @RequestMapping("/keys/{id}")
     public Key getKeybyId(@PathVariable("id")Long idKey) {
         return this.keyService.getKeybyId(idKey);

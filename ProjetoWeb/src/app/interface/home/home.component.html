@@ -14,7 +14,7 @@
             </div>
             <div class="top-game">
                 <div>
-                    <img src="assets/Images/M&B2.jpg" id="top-image-img" alt="" [routerLink]="['game/mount&blade']">
+                    <img src="assets/Images/M&B2.jpg" id="top-game-img" alt="" [routerLink]="['game/mount&blade']">
                 </div>
                 <div class="top-game-prnts" [routerLink]="['game/mount&blade']">
                     <!-- <img src="assets/Images/M&B2_01.jpg" class="top-game-prnts-transition" alt=""> -->
@@ -22,18 +22,21 @@
 
             </div>
 
+        <div class="second-games-bar">
             <div class="second-games">
                 <div>
-                    <img src="assets\Images\COD3.jpg">
-                    <img src="assets\Images\TW3.jpg">
+                    <img src="assets\Images\COD3.jpg" [routerLink]="['game/cod']">
+                    <img src="assets\Images\TW3.jpg"  [routerLink]="['game/thewitcher3']"> 
                 </div>
                 <div>
-                    <img src="assets\Images\TRPC6.jpg">
-                    <img src="assets\Images\sekiro.jpg">
+                    <img src="assets\Images\TRPC6.jpg" [routerLink]="['game/tropico_6']">
+                    <img src="assets\Images\sekiro.jpg" [routerLink]="['game/sekiro']">
 
                 </div>
 
             </div>
+                
+        </div>
 
         </div>
 

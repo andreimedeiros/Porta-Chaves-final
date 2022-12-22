@@ -1,0 +1,41 @@
+<div class="game-section">
+    <div>
+        <img src="assets/Images/COD3.jpg" alt="">
+    </div>
+    <div class="game-section-text">
+        <h1>Call of Duty®: Black Ops 4</h1>
+        <p>
+            Black Ops 4 traz combate Multijogador duro, realista e fluido, a maior oferta de Zumbis de todos os tempos com cinco aventuras de mortos-vivos, e Blackout, onde o universo Black Ops ganha vida em duas imensas experiências de battle royale.
+
+O Multijogador é levado a outro nível na experiência de combate realista mais emocionante até hoje, com foco na jogabilidade tática e nas escolhas dos jogadores.
+
+Em Blackout, Black Ops ganha vida em uma experiência de battle royale que une o combate típico de Black Ops e os maiores mapas da história de Call of Duty®.
+
+Nunca houve um melhor momento para entrar no Call of Duty®: Black Ops 4 com a estreia da Operação Apocalipse Z, a mais recente operação recheada de ação.
+        </p>
+    </div>
+</div>
+
+<p>
+    <mat-icon [matBadge]="keys.length" matBadgeColor="primary">key</mat-icon>
+</p>
+
+<div>
+    <mat-card *ngFor="let key of keys" class="card-game">
+        <mat-card-header>
+            <!-- <mat-icon>key</mat-icon> -->
+            <mat-card-title>
+                Usuário: {{key.user_email}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            Preço: R$:{{key.preco}},00
+        </mat-card-content>
+
+
+        <mat-card-actions>
+            <button id="botaocomprar" mat-raised-button color="warn"
+                [routerLink]="['/compra-game-key', key.id]">Comprar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

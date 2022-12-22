@@ -1,12 +1,12 @@
 <div class="menu">
     
     
-        <mat-icon aria-hidden="false" fontIcon="home" [routerLink]="['']"></mat-icon>
+    <mat-icon aria-hidden="false" fontIcon="home" id="home-icon-btn" [routerLink]="['']"></mat-icon>
         
     
 
-    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']" (click)="logOut()">
-        <mat-icon aria-hidden="false" fontIcon="person_outline"></mat-icon>
+    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']" (click)="logOut()" class="loginlogout">
+        <mat-icon aria-hidden="false" fontIcon="person_outline" ></mat-icon>
         {{botaonome}}
     </button>
 

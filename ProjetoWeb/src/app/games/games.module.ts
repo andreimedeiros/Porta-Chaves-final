@@ -9,6 +9,11 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CompraGameComponent } from './compra-game/compra-game.component';
 import { MountandbladeComponent } from './games/mountandblade/mountandblade.component';
+import { KeysModule } from '../keys/keys.module';
+import { CodComponent } from './games/cod/cod.component';
+import { Tw3Component } from './games/tw3/tw3.component';
+import { Tropico6Component } from './games/tropico6/tropico6.component';
+import { SekiroComponent } from './games/sekiro/sekiro.component';
 
 
 
@@ -17,7 +22,11 @@ import { MountandbladeComponent } from './games/mountandblade/mountandblade.comp
     CadastroGameComponent,
     ListagemGameComponent,
     CompraGameComponent,
-    MountandbladeComponent
+    MountandbladeComponent,
+    CodComponent,
+    Tw3Component,
+    Tropico6Component,
+    SekiroComponent
   ],
   imports: [
     MaterialModule,
@@ -25,7 +34,9 @@ import { MountandbladeComponent } from './games/mountandblade/mountandblade.comp
     MatFormFieldModule,
     MatInputModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    KeysModule
+
   ],
   exports: [
     CadastroGameComponent,

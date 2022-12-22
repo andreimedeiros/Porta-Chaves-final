@@ -1,0 +1,41 @@
+<div class="game-section">
+    <div>
+        <img src="assets/Images/sekiro.jpg" alt="">
+    </div>
+    <div class="game-section-text">
+        <h1>Sekiro™: Shadows Die Twice - GOTY Edition</h1>
+        <p>
+            Trilhe seu próprio caminho de vingança nesta premiada aventura da FromSoftware, os criadores da franquia Dark Souls.
+
+            Em Sekiro™: Shadows Die Twice, você é o 'lobo de um braço só', um guerreiro desfigurado e desgraçado, resgatado da beira da morte. Jurado para proteger um jovem lorde descendente de uma antiga linhagem de sangue, você vira alvo de muitos inimigos perigosos, incluindo o temido clã Ashina. Quando o jovem lorde é capturado, você parte em uma jornada de redenção onde nada impedirá você, nem mesmo a própria morte.
+            
+            Explore o Japão no final dos anos 1500, um período brutal de conflitos mortais constantes, enquanto enfrenta inimigos épicos em um mundo sombrio e distorcido. Use um arsenal de ferramentas prostéticas mortais e habilidades ninjas poderosas ao mesmo tempo em que alterna furtividade, travessia vertical e combate direto visceral em um confronto sangrento.
+            
+            Obtenha vingança. Retome sua honra. Mate astuciosamente.
+        </p>
+    </div>
+</div>
+
+<p>
+    <mat-icon [matBadge]="keys.length" matBadgeColor="primary">key</mat-icon>
+</p>
+
+<div>
+    <mat-card *ngFor="let key of keys" class="card-game">
+        <mat-card-header>
+            <!-- <mat-icon>key</mat-icon> -->
+            <mat-card-title>
+                Usuário: {{key.user_email}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            Preço: R$:{{key.preco}},00
+        </mat-card-content>
+
+
+        <mat-card-actions>
+            <button id="botaocomprar" mat-raised-button color="warn"
+                [routerLink]="['/compra-game-key', key.id]">Comprar</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

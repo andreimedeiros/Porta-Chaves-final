@@ -44,12 +44,10 @@ export class CompraGameComponent implements OnInit {
       keyremovida => {
         console.log(keyremovida);
         const indxKey = this.keys.findIndex(k => k.id === key.id);
-
-
         if (indxKey > -1) {
           this.keys.splice(indxKey, 1);
         }
-
+        this.mensagemService.info("Compra realizada com sucesso!")
       }
     );
   }

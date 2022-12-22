@@ -31,19 +31,15 @@
 
     </mat-card-content>
     <mat-card-actions>
-        <button id="botaocomprar" mat-raised-button color="warn" >Comprar</button>
+        <button id="botaocomprar" mat-raised-button color="warn" (click)="toggleData();removerKey(key)">Comprar</button>
     </mat-card-actions>
 
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>{{key.preco}}</mat-card-title>
-        </mat-card-header>
-    </mat-card>
+    
     
 
     <!-- <mat-card>
         <mat-card-header>
-            <mat-card-title id="cardtitle" (click)="toggleData()">Ou Pague com Pix<img id="piximg" src="../../../assets/Images/pix.png" alt="piximage"></mat-card-title>
+            <mat-card-title id="cardtitle" ">Ou Pague com Pix<img id="piximg" src="../../../assets/Images/pix.png" alt="piximage"></mat-card-title>
         </mat-card-header>
         <mat-card-content>
             <mat-form-field class="inputcartao" appearance="fill">
@@ -54,10 +50,17 @@
                 <mat-label>CPF</mat-label>
                 <input matInput name="CPF" type="text" placeholder="CPF">
             </mat-form-field>
-            <div *ngIf="toDisplay">
+            <div>
                 <img src="../../../assets/Images/qrcode.png" alt="qrimage">
             </div>
         </mat-card-content> -->
+
+        <mat-card>
+        <mat-card-header *ngIf="toDisplay">
+            <mat-card-title>Sua chave:</mat-card-title>
+            <mat-card-content id="chave">{{key.codigo}}</mat-card-content>
+        </mat-card-header>
+    </mat-card>
 
     </mat-card>
 

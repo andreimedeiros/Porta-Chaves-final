@@ -34,6 +34,26 @@ export class KeysService {
     return this.httpClientKeys.get<Key[]>(this.URL_KEY);
   }
 
+  listarMB(): Observable<Key[]> {
+    return this.httpClientKeys.get<Key[]>(`${this.URL_KEY}/games/keys/1`);
+  }
+
+  listarcod(): Observable<Key[]> {
+    return this.httpClientKeys.get<Key[]>(`${this.URL_KEY}/games/keys/2`);
+  }
+
+  listartw3(): Observable<Key[]> {
+    return this.httpClientKeys.get<Key[]>(`${this.URL_KEY}/games/keys/3`);
+  }
+
+  listartrpc(): Observable<Key[]> {
+    return this.httpClientKeys.get<Key[]>(`${this.URL_KEY}/games/keys/4`);
+  }
+
+  listarskr(): Observable<Key[]> {
+    return this.httpClientKeys.get<Key[]>(`${this.URL_KEY}/games/keys/5`);
+  }
+
 
 
 

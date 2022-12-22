@@ -3,11 +3,11 @@ import { Key } from 'src/app/shared/model/key';
 import { KeysService } from 'src/app/shared/services/keys/keys.service';
 
 @Component({
-  selector: 'app-mountandblade',
-  templateUrl: './mountandblade.component.html',
-  styleUrls: ['./mountandblade.component.scss']
+  selector: 'app-tropico6',
+  templateUrl: './tropico6.component.html',
+  styleUrls: ['./tropico6.component.scss']
 })
-export class MountandbladeComponent implements OnInit {
+export class Tropico6Component implements OnInit {
 
   keys: Array<Key>;
 
@@ -16,7 +16,7 @@ export class MountandbladeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.keysService.listarMB().subscribe(
+    this.keysService.listartrpc().subscribe(
       keysobs => this.keys = keysobs
     );
 

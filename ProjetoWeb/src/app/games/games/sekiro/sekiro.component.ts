@@ -3,11 +3,11 @@ import { Key } from 'src/app/shared/model/key';
 import { KeysService } from 'src/app/shared/services/keys/keys.service';
 
 @Component({
-  selector: 'app-mountandblade',
-  templateUrl: './mountandblade.component.html',
-  styleUrls: ['./mountandblade.component.scss']
+  selector: 'app-sekiro',
+  templateUrl: './sekiro.component.html',
+  styleUrls: ['./sekiro.component.scss']
 })
-export class MountandbladeComponent implements OnInit {
+export class SekiroComponent implements OnInit {
 
   keys: Array<Key>;
 
@@ -16,7 +16,7 @@ export class MountandbladeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.keysService.listarMB().subscribe(
+    this.keysService.listarskr().subscribe(
       keysobs => this.keys = keysobs
     );
 
