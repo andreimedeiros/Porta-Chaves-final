@@ -11,6 +11,10 @@ public class KeyDTO {
         private String user_id;
         private String game_id;
 
+
+
+
+
     public KeyDTO(String codigo, BigDecimal preco, String user_id, String game_id) {
         this.codigo = codigo;
         this.preco = preco;

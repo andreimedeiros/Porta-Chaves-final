@@ -6,7 +6,7 @@ class User {
     nome?: string;
     email?: string;
     senha?: string;
-    keys?: Key[]; 
+    keys?: Array<Key>; 
 
 
     constructor(id?: string, user: User = {}) {

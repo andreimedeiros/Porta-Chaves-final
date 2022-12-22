@@ -30,7 +30,6 @@ public class UserController {
 
 
     @PostMapping("/users")
-
     public User InserirUser(@RequestBody User user){
         return this.userService.InserirouAtualizarUser(user);
     }

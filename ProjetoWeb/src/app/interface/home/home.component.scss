@@ -11,6 +11,10 @@ body {
     height: 2500px;
 }
 
+body img:hover {
+    cursor: pointer;
+}
+
 .container {
     background-color: #262626;
 }

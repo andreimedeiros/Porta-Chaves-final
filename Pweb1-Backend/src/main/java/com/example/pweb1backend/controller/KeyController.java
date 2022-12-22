@@ -32,7 +32,7 @@ public class KeyController {
         return this.keyService.listarKeys();
     }
 
-    @RequestMapping("/key/{id}")
+    @RequestMapping("/keys/{id}")
     public Key getKeybyId(@PathVariable("id")Long idKey) {
         return this.keyService.getKeybyId(idKey);
     }
@@ -56,8 +56,6 @@ public class KeyController {
         key.setUser(user);
         key.setGame(game);
 
-
-
         return this.keyService.InserirouAtualizarKey(key);
 
     }
@@ -70,6 +68,7 @@ public class KeyController {
     }
     
     */
+
     @PutMapping("/keys/{id}")
     public Key AtualizarKey(@RequestBody Key key) {
         return this.keyService.InserirouAtualizarKey(key);

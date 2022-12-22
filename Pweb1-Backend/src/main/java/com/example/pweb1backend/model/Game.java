@@ -2,6 +2,7 @@ package com.example.pweb1backend.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,11 +17,16 @@ public class Game {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "game")
     //@JoinColumn(name = "game_id")
-    private List<Key> keys;
+    private List<Key> keys = new ArrayList<Key>();
 
 
+    public Game() {}
 
-
+    public Game(String codigo, String nome, String genero) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.genero = genero;
+    }
 
 
     public Long getId() {
