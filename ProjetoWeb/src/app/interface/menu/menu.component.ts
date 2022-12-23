@@ -28,6 +28,7 @@ export class MenuComponent implements OnInit {
   logOut() {
     if (window.localStorage.getItem("token")) {
       window.localStorage.clear();
+      
     }
 
 }

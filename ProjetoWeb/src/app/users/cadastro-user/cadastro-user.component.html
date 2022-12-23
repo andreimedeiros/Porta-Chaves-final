@@ -20,6 +20,11 @@
             </mat-form-field>
 
             <mat-form-field class="inputUserCadastro" appearance="fill">
+                <mat-label>Idade</mat-label>
+                <input matInput [(ngModel)]="user.idade" name="userid" placeholder="Idade">
+            </mat-form-field>
+
+            <mat-form-field class="inputUserCadastro" appearance="fill">
                 <mat-label>Senha</mat-label>
                 <input matInput [(ngModel)]="user.senha" name="usersenha" type="text" placeholder="password">
             </mat-form-field>

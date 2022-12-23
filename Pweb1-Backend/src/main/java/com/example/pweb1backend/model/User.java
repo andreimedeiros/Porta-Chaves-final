@@ -14,6 +14,8 @@ public class User {
 
     private String cpf;
     private String nome;
+
+    private Integer idade;
     private String senha;
     private String email;
 
@@ -51,6 +53,14 @@ public class User {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
     }
 
     public String getSenha() {
