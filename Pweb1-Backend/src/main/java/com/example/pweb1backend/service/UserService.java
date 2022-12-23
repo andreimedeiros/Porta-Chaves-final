@@ -23,8 +23,17 @@ public class UserService {
         return this.userRepository.findById(idUser).orElse(null);
     }
 
-    public User InserirouAtualizarUser(User user) {
-        return this.userRepository.save(user);
+    public User InserirouAtualizarUser(User user) throws Exception {
+        if (user.getIdade()>=16) {
+            if (user.getCpf().length() != 11) {
+                return this.userRepository.save(user);
+            } else {
+                throw new Exception("CPF inválido.");
+            }
+        } else {
+            throw new Exception("Idade inválida.");
+        }
+
     }
 
     public void apagarUsuario(Long idUser) {

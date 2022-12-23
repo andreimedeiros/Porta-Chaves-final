@@ -23,9 +23,10 @@ public class User {
 
     public User() {}
 
-    public User(String cpf, String nome, String senha, String email) {
+    public User(String cpf, String nome, Integer idade, String senha, String email) {
         this.cpf = cpf;
         this.nome = nome;
+        this.idade = idade;
         this.senha = senha;
         this.email = email;
     }

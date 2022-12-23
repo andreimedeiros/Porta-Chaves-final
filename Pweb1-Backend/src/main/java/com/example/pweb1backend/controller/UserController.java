@@ -30,12 +30,12 @@ public class UserController {
 
 
     @PostMapping("/users")
-    public User InserirUser(@RequestBody User user){
+    public User InserirUser(@RequestBody User user) throws Exception {
         return this.userService.InserirouAtualizarUser(user);
     }
 
     @PutMapping("/users/{id}")
-    public User AtualizarUser(@RequestBody User user){
+    public User AtualizarUser(@RequestBody User user) throws Exception {
         return this.userService.InserirouAtualizarUser(user);
     }
 

@@ -1,0 +1,8 @@
+INSERT INTO tb_game(
+	id, codigo, genero, nome)
+	VALUES 
+	('1', '1', 'Estratégia', 'Mount & Blade 2: Bannerlord'),
+	('2', '2', 'FPS', 'Call of Duty: Black Ops 4'),
+	('3', '3', 'RPG', 'The Witcher 3'),
+	('4', '4', 'Gerenciamento', 'Tropico 6'),
+	('5', '5', 'Ação', 'Sekiro')
