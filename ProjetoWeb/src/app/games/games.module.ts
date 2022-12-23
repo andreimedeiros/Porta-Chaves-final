@@ -14,6 +14,8 @@ import { CodComponent } from './games/cod/cod.component';
 import { Tw3Component } from './games/tw3/tw3.component';
 import { Tropico6Component } from './games/tropico6/tropico6.component';
 import { SekiroComponent } from './games/sekiro/sekiro.component';
+import { InterfaceModule } from '../interface/interface.module';
+
 
 
 
@@ -35,7 +37,8 @@ import { SekiroComponent } from './games/sekiro/sekiro.component';
     MatInputModule,
     RouterModule,
     HttpClientModule,
-    KeysModule
+    KeysModule,
+    InterfaceModule
 
   ],
   exports: [

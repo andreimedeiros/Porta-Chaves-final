@@ -13,12 +13,27 @@
 
 .menu {
     display: flex;
-    justify-content: flex-end;
     background-color: #333333;
     color: white;
     align-items: center;
-    gap: 1.5rem;
     padding: .5rem 0 ;
+    justify-content: space-between;
+    
+}
+
+.logosection {
+    justify-self: flex-start;
+    padding-left: 1rem;
+}
+
+.logosection img {
+    cursor: pointer;
+}
+
+.menuitems {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
 
 #botaomenu {

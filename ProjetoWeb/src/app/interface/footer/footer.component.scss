@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #262626;
+    font-family: 'Open Sans', sans-serif;
+    padding: rem ;
+    font-size: 12px;
+    margin-top: 4rem;
+    padding: 4rem 0;
+    background-color:  rgb(255,191,37);
+    justify-content: center;
+    justify-items: center;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .span {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  

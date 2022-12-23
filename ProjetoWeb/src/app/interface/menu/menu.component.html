@@ -1,25 +1,33 @@
 <div class="menu">
     
-    
-    <mat-icon aria-hidden="false" fontIcon="home" id="home-icon-btn" [routerLink]="['']"></mat-icon>
-        
-    
+    <div class="logosection">
+        <img src="../../../assets/Images/LOGO124.png" [routerLink]="['']">
+    </div>
 
-    <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']" (click)="logOut()" class="loginlogout">
-        <mat-icon aria-hidden="false" fontIcon="person_outline" ></mat-icon>
-        {{botaonome}}
-    </button>
 
-    <button id="botaomenu" mat-button [matMenuTriggerFor]="menu">Menu</button>
-    
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
-        <button mat-menu-item [routerLink]="['/cadastrar-user']">Cadastrar Usuário</button>
-        <button mat-menu-item [routerLink]="['/cadastrar-game']">Cadastrar Game</button>
-        <button mat-menu-item [routerLink]="['/cadastrar-key']">Cadastrar Key</button>
-        <button mat-menu-item [routerLink]="['/users-list']">Lista de Usuários</button>
-        <button mat-menu-item [routerLink]="['/games-list']">Lista de Jogos</button>
+    <div class="menuitems">
+
         
-    </mat-menu>
+        <mat-icon aria-hidden="false" fontIcon="home" id="home-icon-btn" [routerLink]="['']"></mat-icon>
+        
+        
+        
+        <button id="botaosessao" [routerLink]="logado ? [''] : ['/login']" (click)="logOut()" class="loginlogout">
+            <mat-icon aria-hidden="false" fontIcon="person_outline" ></mat-icon>
+            {{botaonome}}
+        </button>
+        
+        <button id="botaomenu" mat-button [matMenuTriggerFor]="menu">Menu</button>
+        
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item [routerLink]="['/cadastrar-user']">Cadastrar Usuário</button>
+            <button mat-menu-item [routerLink]="['/cadastrar-game']">Cadastrar Game</button>
+            <button mat-menu-item [routerLink]="['/cadastrar-key']">Cadastrar Key</button>
+            <button mat-menu-item [routerLink]="['/users-list']">Lista de Usuários</button>
+            <button mat-menu-item [routerLink]="['/games-list']">Lista de Jogos</button>
+            
+        </mat-menu>
+    </div>
 </div>
 
 
